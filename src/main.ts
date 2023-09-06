@@ -1,8 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
-import './clean-code/06-clases-c.ts'
+import './code-smells/02-low-coupling.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -13,13 +12,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
     <h1>CleanCode y SOLID</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
     <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+      Revisar la consola para ver los resultados
     </p>
   </div>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
