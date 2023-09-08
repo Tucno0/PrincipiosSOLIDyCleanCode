@@ -9,7 +9,7 @@
 
         getProduct(id: number) {
             // Realiza un proceso para obtener el producto y retornarlo
-            console.log('Producto: ',{id, name: "OLED Tv"});
+            console.log("Producto: ", { id, name: "OLED Tv" });
         }
 
         saveProduct(product: Product) {
@@ -19,12 +19,14 @@
     }
 
     class Mailer {
+        private masterEmail: string = "fernando@google.com";
 
-        private masterEmail: string = 'fernando@google.com';
-
-        sendEmail( emailList: string[], template: 'to-clients' | 'to-admins' ) {
+        sendEmail(emailList: string[], template: "to-clients" | "to-admins") {
             // Envia un correo electronico
-            console.log("Enviando correo electronico", { emailList, message: template });
+            console.log("Enviando correo electronico", {
+                emailList,
+                message: template,
+            });
         }
     }
 
@@ -34,7 +36,7 @@
         private productService: ProductService;
         private mailer: Mailer;
 
-        constructor( productService: ProductService, mailer: Mailer ) {
+        constructor(productService: ProductService, mailer: Mailer) {
             this.productService = productService;
             this.mailer = mailer;
         }
@@ -48,7 +50,7 @@
         }
 
         notifyClients() {
-            this.mailer.sendEmail(['eduardo@google.com'], 'to-clients');
+            this.mailer.sendEmail(["eduardo@google.com"], "to-clients");
         }
     }
 
@@ -64,7 +66,7 @@
     const productService = new ProductService();
     const mailer = new Mailer();
 
-    const productBloc = new ProductBloc( productService, mailer);
+    const productBloc = new ProductBloc(productService, mailer);
     const cartBloc = new CartBloc();
 
     productBloc.loadProduct(10);

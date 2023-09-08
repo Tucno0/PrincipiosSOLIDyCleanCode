@@ -1,7 +1,7 @@
 import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
-import "./solid/01-single-responsability";
+import "./solid/02-open-close-a";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <div>
